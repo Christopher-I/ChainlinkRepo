@@ -40,6 +40,7 @@
     "ethereumjs-util": "^6.1.0",
     "solium": "^1.2.3",
     "solium-plugin-zeppelin": "^0.0.2",
-    "truffle": "^5.0.4"
+    "truffle": "^5.0.4",
+    "webpack": "^4.31.0"
   }
 }
