@@ -1,0 +1,16 @@
+4_mycontract_migration.js
+=========================
+
+   Replacing 'MyContract'
+   ----------------------
+   > transaction hash:    0x5b5f78bc3958305cc9cca3536ebf093d87f3d6359a1ffc0d842caf98ed38451c
+   > Blocks: 1            Seconds: 12
+   > contract address:    0x9bc3B50fc305E30b58A40be72Fd2987A00aA4dEB
+   > block number:        4405779
+   > block timestamp:     1558216193
+   > account:             0x2386D2ace73e63Bd93191c88fFc674E6FEc4ef64
+   > balance:             6.621047918099957994
+   > gas used:            2052282
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02052282 ETH

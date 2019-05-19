@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/Chainlinked
+    # The primary container is an instance of the first image listed. The job's commands run in this container.
+    docker:
+      - image: circleci/node:8-browsers
+    # The secondary container is an instance of the second listed image which is run in a common network where ports exposed on the primary container are available on localhost.
+      - image: trufflesuite/ganache-cli
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Install npm packages
+          command: npm install
+      - run:
+          name: Migrate Contracts
+          command: npm run migrate
+      - run:
+          name: Test Contracts
+          command: npm test
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
